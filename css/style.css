@@ -49,9 +49,9 @@ main {
 /* IMAGE SECTION */
 .img-container {
     width: 100%;
-    height: 200px;
+    height: 40%;
     margin: 0;
-    padding: 2rem 0;
+    padding: 0;
 }
 
 .img {
@@ -66,12 +66,17 @@ main {
 /* SEARCH SECTION */
 .search-container {
     width: 100%;
+    height: 60%;
+}
+
+form {
+    width: 100%;
+    height: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: start;
     align-items: center;
     row-gap: .5rem;
-    padding: 5rem 0;
 }
 
 label {
