@@ -38,18 +38,16 @@ img {
 /* MAIN CONTENT */
 main {
     height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: start;
-    align-items: center;
-    padding: 0 1.5rem;   
+    max-width: 1024px;
+    display: grid;
+    grid-template-rows: 1fr 1fr 3fr;
+    padding: 0 1.5rem;
+    margin: 0 auto;   
     text-align: center;
 }
 
 /* IMAGE SECTION */
 .img-container {
-    width: 100%;
-    height: 40%;
     margin: 0;
     padding: 0;
 }
@@ -64,29 +62,26 @@ main {
 }
 
 /* SEARCH SECTION */
-.search-container {
-    width: 100%;
-    height: 60%;
-}
-
 form {
-    width: 100%;
-    height: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: start;
+    justify-content: center;
     align-items: center;
     row-gap: .5rem;
-}
-
-label {
-    text-align: center;
 }
 
 input:focus {
     outline: none;
 }
 
+
+/* MAP SECTION */
+#map {
+    height: 100%;
+    width: 100%;
+  }
+
+/* MEDIA QUERIES */
 @media screen and (max-width: 250px) {
     body {
         display: inline-block;
