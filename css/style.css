@@ -91,5 +91,6 @@ input:focus {
 @media screen and (min-width: 1024px) {
     main {
         grid-template-rows: .5fr .5fr 3fr;
+        padding: 1.5rem;
     }
 }
