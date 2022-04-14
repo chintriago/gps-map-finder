@@ -88,9 +88,10 @@ input:focus {
     }
 }
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 500px) {
     main {
-        grid-template-rows: .5fr .5fr 3fr;
-        padding: 1.5rem;
+        grid-template-rows: .5fr .25fr 3.25fr;
+        padding: 0 1.5rem 1.5rem;
+        row-gap: 1rem;
     }
 }
