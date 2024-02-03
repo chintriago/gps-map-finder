@@ -117,6 +117,7 @@ a {
 /* END OF GENERAL/RESET */
 
 /* WEBSITE */
+/* Header Section */
 .hero {
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(img/gps-phone.jpg);
     background-repeat: no-repeat;
@@ -157,22 +158,95 @@ form {
     text-align: center;
     font-size: 1.4rem;
     font-weight: 500;
-    padding: .1em .6em;
+    padding: .15em .95em;
+}
+
+.scroll-down-link {
+    cursor: pointer;
+    color: white;
+    position: absolute;
+    z-index: 9999;
+    align-self: center;
+    bottom: 0;
+    margin-bottom: 1em;
+}
+
+.scroll-down-link span {
+    font-size: 4.5rem;
+    font-weight: 900;
+}
+
+.scroll-down-link:hover {
+    bottom: -15px;
+    transition: ease-in-out 400ms;
+}
+
+/* End of Header Section */
+
+/* Map Section */
+.map-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.scroll-up-link {
+    cursor: pointer;
+    color: black;
+    position: absolute;
+    z-index: 9999;
+    align-self: center;
+    margin-top: 1em;
+}
+
+.scroll-up-link span {
+    font-size: 4.5rem;
+    font-weight: 900;
+}
+
+.scroll-up-link:hover {
+    margin-top: 0;
+    transition: ease-in-out 400ms;
 }
 
 .controls {
     background-color: white;
     width: 150px;
-    padding: .25em .5em;
+    height: 39px;
+    padding-left: 1em;
+    margin-top: 1em;
 }
 
 #map {
     min-height: 100vh;
 }
 
+/* MEDIA QUERIES */
 /* Used to remove label text alignment */
 @media screen and (max-width: 1440px) {
     .hero-label {
         padding-left: 0;
+    }
+}
+
+@media screen and (max-width: 815px) {
+    .hero-label {
+        font-size: 1.4rem;
+    }
+
+    .hero-btn {
+        font-size: 1.2rem;
+    }
+
+    .controls {
+        width: 95px;
+        padding-left: .5em;
+    }
+
+    .scroll-down-link {
+        margin-bottom: 3em;
+    }
+
+    .scroll-up-link {
+        margin-top: 3em;
     }
 }
