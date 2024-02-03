@@ -1,11 +1,20 @@
-const searchInput = document.getElementById("gps-search");
-const btn = document.getElementById("btn");
+const gpsInput = document.getElementById("gps-input");
+const searchButton = document.getElementById("search-button");
 const input = document.getElementById("pac-input");
+const bottom = document.getElementById("bottom");
+let gpsInputValue;
+let gpsResult;
 
-btn.addEventListener("click", function (event) {
+searchButton.addEventListener("click", function (event) {
     event.preventDefault();
-    let searchInputVal = searchInput.value;
-    let result = searchInputVal.replace("/", ",")
-    input.value = result;
+    gpsInputValue = gpsInput.value;
+    console.log(gpsInputValue);
+    gpsResult = gpsInputValue.replace("/", ",")
+    console.log(gpsResult);
+    input.value = gpsResult;
     input.focus();
+    // scrolls to bottom of the page
+    // found solution below
+    // https://stackoverflow.com/questions/11715646/scroll-automatically-to-the-bottom-of-the-page
+    window.scrollTo(0, document.body.scrollHeight);
 });

@@ -5,32 +5,29 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gps Finder</title>
+    <title>Gps Map Finder</title>
     <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
-    <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <main>
-        <figure class="img-container">
-            <div class="img"></div>
-        </figure>
-        <section class="search-container">
+    <header>
+        <div class="hero">
             <form>
-                <label for="gps-search">Enter your GPS coordinates</label>
-                <input type="search" id="gps-search" name="gps-search">
-                <button type="submit" id="btn">search</button>
-            </form>
-        </section>
-        <section class="map-container">
+                <label class="hero-label" for="gps-search">Enter Your GPS Coordinates</label>
+                <input id="gps-input" class="hero-input" type="search" name="gps-input">
+                <button type="submit" id="search-button" class="hero-btn">search</button>
+        </div>
+    </header>
+    <main>
+        <div class="map-container">
             <div id="map"></div>
-            <input id="pac-input" class="controls" type="text" placeholder="Search Box" />
+            <input id="pac-input" class="controls" type="text" placeholder="enter your gps coordinates" />
             <!-- Async script executes immediately and must be after any DOM elements used in callback. -->
             <script
                 src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB_VWZPp0DdhxcxO3bbrDrFJXZ7NJ4D6z4&callback=initAutocomplete&libraries=places&v=weekly"
                 async></script>
-        </section>
+        </div>
     </main>
     <script src="js/google.js"></script>
     <script src="js/script.js"></script>
