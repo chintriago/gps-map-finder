@@ -162,9 +162,9 @@ form {
     background-color: yellow;
     border-radius: 4px;
     text-align: center;
-    font-size: 1.4rem;
+    font-size: 1.5rem;
     font-weight: 500;
-    padding: .15em .95em;
+    padding: .1em 1.5em;
 }
 
 .hero-btn:hover {
@@ -246,11 +246,7 @@ form {
 
 @media screen and (max-width: 815px) {
     .hero-label {
-        font-size: 1.4rem;
-    }
-
-    .hero-btn {
-        font-size: 1.2rem;
+        font-size: 1.5rem;
     }
 
     .controls {
