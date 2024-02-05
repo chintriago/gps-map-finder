@@ -21,8 +21,10 @@ html {
     scroll-behavior: smooth;
 }
 
-body {
+body,
+html {
     font-family: 'Roboto', sans-serif;
+    font-size: 16px;
 }
 
 /* Remove default margin in favour of better control in authored CSS */
@@ -133,6 +135,8 @@ form {
     display: grid;
     place-items: center;
     gap: 1em;
+    padding-top: 3.5em;
+    padding-left: 2em;
 }
 
 .hero-label {
@@ -141,7 +145,7 @@ form {
     font-weight: 700;
     letter-spacing: 1px;
     text-align: center;
-    padding-left: 1.5em;
+    /* padding-left: 1.5em; */
 }
 
 .hero-input {
@@ -152,6 +156,7 @@ form {
     width: 250px;
     border-radius: 4px;
     border: 2px solid rgba(255, 255, 255, 0);
+    margin-bottom: 1em;
 }
 
 .hero-input:focus {
@@ -164,11 +169,35 @@ form {
     text-align: center;
     font-size: 1.5rem;
     font-weight: 500;
-    padding: .1em 1.5em;
+    padding: .1em 0;
+    width: 200px;
 }
 
 .hero-btn:hover {
     background-color: rgb(203, 203, 0);
+}
+
+form p {
+    color: white;
+    font-size: 1.8rem;
+    font-weight: 700;
+    text-align: center;
+    letter-spacing: 1px;
+}
+
+.hero-link {
+    background-color: rgb(0, 200, 255);
+    border-radius: 4px;
+    cursor: pointer;
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 500;
+    padding: .1em 0;
+    width: 200px;
+}
+
+.hero-link:hover {
+    background-color: rgb(39, 158, 191);
 }
 
 .scroll-down-link {
@@ -191,6 +220,10 @@ form {
     transition: ease-in-out 400ms;
 }
 
+.border-error {
+    border: 2px solid red;
+}
+
 /* End of Header Section */
 
 /* Map Section */
@@ -206,6 +239,7 @@ form {
     z-index: 9999;
     align-self: center;
     margin-top: 1em;
+    padding-left: 2em;
 }
 
 .scroll-up-link span {
@@ -220,7 +254,7 @@ form {
 
 .controls {
     background-color: white;
-    width: 150px;
+    width: 200px;
     height: 39px;
     padding-left: 1em;
     margin-top: 1em;
@@ -228,7 +262,8 @@ form {
     border: 2px solid rgba(255, 255, 255, 0);
 }
 
-.controls:focus {
+.controls:focus,
+.controls:active {
     border: 2px solid rgb(0, 200, 255);
 }
 
@@ -239,18 +274,23 @@ form {
 /* MEDIA QUERIES */
 /* Used to remove label text alignment */
 @media screen and (max-width: 1440px) {
-    .hero-label {
+    form {
+        padding-top: 0;
+        padding-left: 0;
+    }
+
+    .scroll-up-link {
         padding-left: 0;
     }
 }
 
-@media screen and (max-width: 815px) {
+@media screen and (max-width: 915px) {
     .hero-label {
         font-size: 1.5rem;
     }
 
     .controls {
-        width: 95px;
+        width: 90px;
         padding-left: .5em;
     }
 
