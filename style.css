@@ -285,6 +285,10 @@ form p {
 }
 
 @media screen and (max-width: 915px) {
+    form {
+        padding-top: 4em;
+    }
+
     .hero-label {
         font-size: 1.5rem;
     }
