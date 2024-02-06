@@ -226,7 +226,7 @@ form p {
 }
 
 .arrow-container:hover {
-    bottom: -15px;
+    margin-bottom: 0;
     transition: ease-in-out 400ms;
 }
 
@@ -314,7 +314,7 @@ form p {
     }
 
     .arrow-container {
-        bottom: 20px;
+        bottom: 40px;
     }
 
     .scroll-up-link {
@@ -322,7 +322,7 @@ form p {
     }
 }
 
-@media screen and (max-height: 600px) {
+@media screen and (max-height: 630px) {
     .arrow-container {
         position: initial;
         bottom: initial;
