@@ -120,32 +120,43 @@ a {
 
 /* WEBSITE */
 /* Header Section */
+.flex-center-column {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
 .hero {
+    min-height: 100vh;
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(img/gps-phone.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    min-height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     position: relative;
 }
 
 form {
-    display: grid;
-    place-items: center;
-    gap: .8em;
-    padding-left: 2em;
+    padding-top: 5em;
+}
+
+.input-container {
+    margin-bottom: 1.5em;
+    padding-left: 2.5em;
+}
+
+.btn-container {
+    margin-bottom: 1.5em;
+    padding-left: 2.5em;
 }
 
 .hero-label {
     color: white;
     font-size: 1.6rem;
     font-weight: 700;
-    letter-spacing: 1px;
+    letter-spacing: 2px;
+    margin-bottom: .5em;
     text-align: center;
-    padding-left: 1.5em;
 }
 
 .hero-input {
@@ -200,12 +211,13 @@ form p {
     background-color: rgb(39, 158, 191);
 }
 
-.scroll-down-link {
+.arrow-container {
     cursor: pointer;
     color: white;
     position: absolute;
     bottom: 0;
     margin-bottom: 1em;
+    padding-left: 2.5em;
 }
 
 .scroll-down-link span {
@@ -213,7 +225,7 @@ form p {
     font-weight: 900;
 }
 
-.scroll-down-link:hover {
+.arrow-container:hover {
     bottom: -15px;
     transition: ease-in-out 400ms;
 }
@@ -239,7 +251,7 @@ form p {
     z-index: 9999;
     align-self: center;
     margin-top: 1em;
-    padding-left: 2em;
+    padding-left: 2.5em;
 }
 
 .scroll-up-link span {
@@ -274,8 +286,15 @@ form p {
 /* MEDIA QUERIES */
 /* Used to remove label text alignment */
 @media screen and (max-width: 1440px) {
-    form {
-        padding-top: 0;
+    .input-container {
+        padding-left: 0;
+    }
+
+    .btn-container {
+        padding-left: 0;
+    }
+
+    .arrow-container {
         padding-left: 0;
     }
 
@@ -286,11 +305,7 @@ form p {
 
 @media screen and (max-width: 915px) {
     form {
-        padding-top: 4em;
-    }
-
-    .hero-label {
-        padding-left: 0;
+        padding: 5em 1em 0 1em;
     }
 
     .controls {
@@ -304,12 +319,14 @@ form p {
 }
 
 @media screen and (max-height: 550px) {
-    form {
-        min-height: 100vh;
-    }
-
-    .scroll-down-link {
+    .arrow-container {
         position: initial;
         bottom: initial;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    body {
+        display: inline-block;
     }
 }

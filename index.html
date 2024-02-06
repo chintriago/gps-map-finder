@@ -16,16 +16,25 @@
 
 <body>
     <header id="header">
-        <div class="hero">
-            <form>
-                <label class="hero-label" for="gps-search">Enter Your GPS Coordinates</label>
-                <input id="gps-input" class="hero-input" type="search" name="gps-input">
-                <button type="submit" id="search-button" class="hero-btn">search</button>
-                <p>or</p>
-                <a href="" target="_blank" id="google-button" class="hero-link">google</a>
-                <a href="#map" id="arrow-down-link" class="scroll-down-link"><span class="material-symbols-outlined">
+        <div class="hero flex-center-column">
+            <form class="flex-center-column">
+                <div class="input-container flex-center-column">
+                    <label class="hero-label" for="gps-search">Enter Your GPS Coordinates</label>
+                    <input id="gps-input" class="hero-input" type="search" name="gps-input">
+                </div>
+                <div class="btn-container flex-center-column">
+                    <button type="submit" id="search-button" class="hero-btn">search</button>
+                    <p>or</p>
+                    <a href="" target="_blank" id="google-button" class="hero-link">google</a>
+                </div>
+            </form>
+            <div class="arrow-container">
+                <a href="#map" id="arrow-down-link" class="scroll-down-link">
+                    <span class="material-symbols-outlined">
                         arrow_downward
-                    </span></a>
+                    </span>
+                </a>
+            </div>
         </div>
     </header>
     <main>
