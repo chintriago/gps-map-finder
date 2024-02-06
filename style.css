@@ -134,8 +134,7 @@ a {
 form {
     display: grid;
     place-items: center;
-    gap: 1em;
-    padding-top: 3.5em;
+    gap: .8em;
     padding-left: 2em;
 }
 
@@ -145,7 +144,7 @@ form {
     font-weight: 700;
     letter-spacing: 1px;
     text-align: center;
-    /* padding-left: 1.5em; */
+    padding-left: 1.5em;
 }
 
 .hero-input {
@@ -204,8 +203,6 @@ form p {
     cursor: pointer;
     color: white;
     position: absolute;
-    z-index: 9999;
-    align-self: center;
     bottom: 0;
     margin-bottom: 1em;
 }
@@ -230,12 +227,14 @@ form p {
 .map-container {
     display: flex;
     flex-direction: column;
+    position: relative;
 }
 
 .scroll-up-link {
     cursor: pointer;
     color: black;
     position: absolute;
+    top: 0;
     z-index: 9999;
     align-self: center;
     margin-top: 1em;
@@ -290,7 +289,7 @@ form p {
     }
 
     .hero-label {
-        font-size: 1.5rem;
+        padding-left: 0;
     }
 
     .controls {
@@ -299,6 +298,17 @@ form p {
     }
 
     .scroll-up-link {
-        margin-top: 3em;
+        top: 40px;
+    }
+}
+
+@media screen and (max-height: 550px) {
+    form {
+        min-height: 100vh;
+    }
+
+    .scroll-down-link {
+        position: initial;
+        bottom: initial;
     }
 }
