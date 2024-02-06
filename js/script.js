@@ -4,12 +4,11 @@ const googleButton = document.getElementById("google-button")
 const input = document.getElementById("pac-input");
 const arrowDownLink = document.getElementById("arrow-down-link");
 let gpsInputValue;
-let gpsResult;
-let activeInput;
 let gpsEvent;
 
+// Function that checks if x has an empty value it will add error state/message.
+// It removes them if the length of the value is greater than 0.
 function emptyInput(x) {
-    activeInput = gpsInput.activeElement;
     if (x.value === "") {
         event.preventDefault();
         gpsInput.classList.add("border-error");
@@ -18,22 +17,17 @@ function emptyInput(x) {
         gpsInput.classList.remove("border-error");
         gpsInput.placeholder = "";
     }
-}
+};
 
-gpsInput.addEventListener("input", function () {
-    gpsInputValue = gpsInput.value;
-    if (gpsInputValue.length > 0) {
-        gpsInput.classList.remove("border-error");
-        gpsInput.placeholder = "";
-    }
-});
-
-
+// Search button click event listener.
+// Prevents default behavior on search button.
+// If gps input value is not empty
+// automatically search input value
+// on google maps. Then scroll to bottom of page.
 searchButton.addEventListener("click", function (event) {
     event.preventDefault();
     emptyInput(gpsInput);
-    gpsInputValue = gpsInput.value;
-    gpsResult = gpsInputValue.replace("/", ",");
+    gpsInputValue = gpsInput.value.replace("/", ",");;
     gpsEvent = new KeyboardEvent('keydown', {
         key: 'Enter',
         code: 'Enter',
@@ -41,22 +35,23 @@ searchButton.addEventListener("click", function (event) {
         keyCode: 13,
     });
     if (gpsInputValue.length > 0) {
-        input.value = gpsResult;
-        arrowDownLink.click();
+        input.value = gpsInputValue;
         input.focus();
         input.dispatchEvent(gpsEvent);
-        // scrolls to bottom of the page
-        // found solution below
         window.scrollTo(0, document.body.scrollHeight);
     } else {
         return false;
     }
-
 });
 
+// Google button click event listener.
+// Prevents default behavior on search button.
+// checks for empty input.
+// checks for incorrect gps format and fixes it.
+// Updates google button href to go to google maps
+// website with input gps coordinates.
 googleButton.addEventListener("click", function (event) {
     emptyInput(gpsInput);
-    gpsInputValue = gpsInput.value;
-    gpsResult = gpsInputValue.replace("/", ",")
-    googleButton.href = "http://maps.google.com/?q=" + gpsResult;
+    gpsInputValue = gpsInput.value.replace("/", ",");
+    googleButton.href = "http://maps.google.com/?q=" + gpsInputValue;
 });
