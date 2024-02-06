@@ -313,12 +313,16 @@ form p {
         padding-left: .5em;
     }
 
+    .arrow-container {
+        bottom: 20px;
+    }
+
     .scroll-up-link {
         top: 40px;
     }
 }
 
-@media screen and (max-height: 550px) {
+@media screen and (max-height: 600px) {
     .arrow-container {
         position: initial;
         bottom: initial;
