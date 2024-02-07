@@ -118,8 +118,7 @@ a {
 
 /* END OF GENERAL/RESET */
 
-/* WEBSITE */
-/* Header Section */
+/* UTILITY CLASSES */
 .flex-center-column {
     display: flex;
     justify-content: center;
@@ -127,6 +126,10 @@ a {
     flex-direction: column;
 }
 
+/* WEBSITE */
+/* Header Section */
+
+/* hero */
 .hero {
     height: 100vh;
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(img/gps-phone.jpg);
@@ -136,17 +139,14 @@ a {
     position: relative;
 }
 
+/* form */
 form {
     padding-top: 5em;
 }
 
+/* input */
 .input-container {
     margin-bottom: 2.5em;
-    padding-left: 2.5em;
-}
-
-.btn-container {
-    margin-bottom: .5em;
     padding-left: 2.5em;
 }
 
@@ -155,14 +155,15 @@ form {
     font-size: 1.6rem;
     font-weight: 700;
     letter-spacing: 2px;
-    margin-bottom: .5em;
+    margin-bottom: .75em;
     text-align: center;
+    text-transform: uppercase;
+    border-bottom: 1.5px solid white;
+    padding: .5em;
 }
 
 .hero-input {
     background-color: white;
-    /* Used to align label text
-    to fit into the hero phone. */
     padding: .35em .5em;
     width: 250px;
     border-radius: 4px;
@@ -174,12 +175,26 @@ form {
     border: 2px solid rgb(0, 200, 255);
 }
 
+/* buttons */
+.btn-container {
+    margin-bottom: 1em;
+    padding-left: 2.5em;
+}
+
+.btn-container p {
+    color: white;
+    font-size: 1.8rem;
+    font-weight: 700;
+    text-align: center;
+    letter-spacing: 1px;
+}
+
 .hero-btn {
     background-color: yellow;
     border-radius: 4px;
     text-align: center;
     font-size: 1.5rem;
-    font-weight: 500;
+    font-weight: 700;
     padding: .1em 0;
     width: 200px;
 }
@@ -188,30 +203,23 @@ form {
     background-color: rgb(203, 203, 0);
 }
 
-form p {
-    color: white;
-    font-size: 1.8rem;
-    font-weight: 700;
-    text-align: center;
-    letter-spacing: 1px;
-}
-
-.hero-link {
+.google-link {
     background-color: rgb(0, 200, 255);
     border-radius: 4px;
     cursor: pointer;
     text-align: center;
     font-size: 1.5rem;
-    font-weight: 500;
+    font-weight: 700;
     padding: .1em 0;
     width: 200px;
 }
 
-.hero-link:hover {
+.google-link:hover {
     background-color: rgb(39, 158, 191);
 }
 
-.arrow-container {
+/* down arrow scroll to bottom */
+.arrow-down-container {
     cursor: pointer;
     color: white;
     position: absolute;
@@ -220,19 +228,17 @@ form p {
     padding-left: 2.5em;
 }
 
+.arrow-down-container:hover {
+    margin-bottom: 0;
+    transition: ease-in-out 400ms;
+}
+
 .scroll-down-link span {
     font-size: 4.5rem;
     font-weight: 900;
 }
 
-.arrow-container:hover {
-    margin-bottom: 0;
-    transition: ease-in-out 400ms;
-}
 
-.border-error {
-    border: 2px solid red;
-}
 
 /* End of Header Section */
 
@@ -241,6 +247,10 @@ form p {
     display: flex;
     flex-direction: column;
     position: relative;
+}
+
+#map {
+    min-height: 100vh;
 }
 
 .scroll-up-link {
@@ -267,7 +277,7 @@ form p {
 .controls {
     background-color: white;
     width: 200px;
-    height: 39px;
+    height: 35px;
     padding-left: 1em;
     margin-top: 1em;
     border-radius: 4px;
@@ -279,12 +289,8 @@ form p {
     border: 2px solid rgb(0, 200, 255);
 }
 
-#map {
-    min-height: 100vh;
-}
-
 /* MEDIA QUERIES */
-/* Used to remove label text alignment */
+/* fixes issues at 1440px width and below */
 @media screen and (max-width: 1440px) {
     .input-container {
         padding-left: 0;
@@ -303,13 +309,14 @@ form p {
     }
 }
 
+/* for mobile up to 915px width */
 @media screen and (max-width: 915px) {
     form {
-        padding: 5em 1em 0 1em;
+        padding: 0 1em;
     }
 
     .controls {
-        width: 90px;
+        width: 100px;
         padding-left: .5em;
     }
 
@@ -322,6 +329,20 @@ form p {
     }
 }
 
+@media screen and (max-width: 375px) {
+    .controls {
+        width: 25px;
+    }
+}
+
+/* for mobile up to 320px width */
+@media screen and (max-width: 320px) {
+    body {
+        display: inline-block;
+    }
+}
+
+/* for mobile with small height up to 630px width */
 @media screen and (max-height: 630px) {
     .arrow-container {
         position: initial;
@@ -329,8 +350,7 @@ form p {
     }
 }
 
-@media screen and (max-width: 320px) {
-    body {
-        display: inline-block;
-    }
+/* Javascript Classes */
+.border-error {
+    border: 2px solid red;
 }
