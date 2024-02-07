@@ -300,7 +300,7 @@ form {
         padding-left: 0;
     }
 
-    .arrow-container {
+    .arrow-down-container {
         padding-left: 0;
     }
 
@@ -320,7 +320,7 @@ form {
         padding-left: .5em;
     }
 
-    .arrow-container {
+    .arrow-down-container {
         bottom: 40px;
     }
 
@@ -343,8 +343,8 @@ form {
 }
 
 /* for mobile with small height up to 630px width */
-@media screen and (max-height: 630px) {
-    .arrow-container {
+@media screen and (max-height: 580px) {
+    .arrow-down-container {
         position: initial;
         bottom: initial;
     }
