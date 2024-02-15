@@ -35,6 +35,7 @@ searchButton.addEventListener("click", function (event) {
         keyCode: 13,
     });
     if (gpsInputValue.length > 0) {
+        gpsInput.value = gpsInputValue
         input.value = gpsInputValue;
         input.focus();
         input.dispatchEvent(gpsEvent);
