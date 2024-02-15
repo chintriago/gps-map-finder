@@ -54,5 +54,6 @@ searchButton.addEventListener("click", function (event) {
 googleButton.addEventListener("click", function (event) {
     emptyInput(gpsInput);
     gpsInputValue = gpsInput.value.replace("/", ",");
+    gpsInput.value = gpsInputValue
     googleButton.href = "http://maps.google.com/?q=" + gpsInputValue;
 });
