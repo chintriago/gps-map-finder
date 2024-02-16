@@ -129,9 +129,16 @@ a {
 /* WEBSITE */
 /* Header Section */
 
+header {
+    height: 100vh;
+    height: 100dvh;
+    width: 100%;
+}
+
 /* hero */
 .hero {
-    height: 100vh;
+    min-height: 100vh;
+    min-width: 100%;
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(img/gps-phone.jpg);
     background-repeat: no-repeat;
     background-size: cover;
@@ -220,16 +227,17 @@ form {
 
 /* down arrow scroll to bottom */
 .arrow-down-container {
+    border-radius: 50%;
+    border: 2px solid white;
     cursor: pointer;
     color: white;
     position: absolute;
     bottom: 0;
-    margin-bottom: 1em;
-    padding-left: 2.5em;
+    margin-bottom: 1.5em;
 }
 
 .arrow-down-container:hover {
-    margin-bottom: 0;
+    margin-bottom: 1em;
     transition: ease-in-out 400ms;
 }
 
@@ -242,8 +250,16 @@ form {
 
 /* End of Header Section */
 
+main {
+    height: 100vh;
+    height: 100dvh;
+    width: 100%;
+}
+
 /* Map Section */
 .map-container {
+    min-height: 100vh;
+    min-width: 100%;
     display: flex;
     flex-direction: column;
     position: relative;
@@ -254,14 +270,15 @@ form {
 }
 
 .scroll-up-link {
+    border-radius: 50%;
+    border: 2px solid black;
     cursor: pointer;
     color: black;
     position: absolute;
     top: 0;
     z-index: 9999;
     align-self: center;
-    margin-top: 1em;
-    padding-left: 2.5em;
+    margin-top: 1.5em;
 }
 
 .scroll-up-link span {
@@ -270,7 +287,7 @@ form {
 }
 
 .scroll-up-link:hover {
-    margin-top: 0;
+    margin-top: 1em;
     transition: ease-in-out 400ms;
 }
 
@@ -309,14 +326,14 @@ form {
     }
 }
 
-/* for mobile up to 915px width */
-@media screen and (max-width: 915px) {
+/* for mobile up to 940px width */
+@media screen and (max-width: 940px) {
     form {
         padding: 0 1em;
     }
 
     .controls {
-        width: 100px;
+        width: 150px;
         padding-left: .5em;
     }
 
@@ -329,9 +346,10 @@ form {
     }
 }
 
-@media screen and (max-width: 375px) {
+/* for mobile up to 430px specifically for the .controls input */
+@media screen and (max-width: 430px) {
     .controls {
-        width: 25px;
+        width: 50px;
     }
 }
 
@@ -340,13 +358,17 @@ form {
     body {
         display: inline-block;
     }
+    .controls {
+        width: 25px;
+    }
 }
 
 /* for mobile with small height up to 630px width */
-@media screen and (max-height: 580px) {
+@media screen and (max-height: 620px) {
     .arrow-down-container {
         position: initial;
         bottom: initial;
+        margin-top: 1em;
     }
 }
 
