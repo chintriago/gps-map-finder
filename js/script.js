@@ -27,7 +27,7 @@ function emptyInput(x) {
 searchButton.addEventListener("click", function (event) {
     event.preventDefault();
     emptyInput(gpsInput);
-    gpsInputValue = gpsInput.value.replace("/", ",");;
+    gpsInputValue = gpsInput.value.replace("/", ",");
     gpsEvent = new KeyboardEvent('keydown', {
         key: 'Enter',
         code: 'Enter',
@@ -56,4 +56,9 @@ googleButton.addEventListener("click", function (event) {
     gpsInputValue = gpsInput.value.replace("/", ",");
     gpsInput.value = gpsInputValue
     googleButton.href = "http://maps.google.com/?q=" + gpsInputValue;
+});
+
+// click on down arrow scrolls to bottom of page.
+arrowDownLink.addEventListener('click', function () {
+    window.scrollTo(0, document.body.scrollHeight);
 });
