@@ -15,6 +15,18 @@
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
     <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
 </head>
+<!-- fix for slow bg image load -->
+<style>
+    header {
+        height: 100vh;
+        width: 100%;
+        background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(img/gps-phone.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        object-fit: cover;
+    }
+</style>
 
 <body>
     <header id="header" class="flex-center-column">
