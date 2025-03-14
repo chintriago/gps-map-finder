@@ -353,6 +353,7 @@ main {
     body {
         display: inline-block;
     }
+
     .controls {
         width: 25px;
     }
